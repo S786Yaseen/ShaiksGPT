@@ -10,11 +10,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Gemini API
-API_KEY = "AIzaSyAN1LWOwRTWxdO2v5eMn-4Ua3GOFERpYMA"
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Configure SerpApi Key
-SERP_API_KEY = "740311d2537c68d3d76de33de8c68a5e0a64108176c0c5742107c17bfaf697a3"
+SERP_API_KEY = os.getenv("SERP_API_KEY")
 
 @app.route('/')
 def serve_index():
