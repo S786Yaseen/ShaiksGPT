@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShaiksGPT - Advanced AI Chatbot</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="app-container">
+        <!-- Sidebar for History -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-robot logo-icon"></i>
+                    <span>ShaiksGPT</span>
+                </div>
+                <button id="new-chat-btn" class="icon-btn tooltip" data-tooltip="New Chat">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+            </div>
+            
+            <div class="history-list" id="history-list">
+                <!-- History items will be populated here by JS -->
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="theme-toggle-btn" class="icon-btn tooltip" data-tooltip="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="icon-btn tooltip" data-tooltip="Settings (Coming Soon)">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-chat">
+            <header class="chat-header">
+                <button id="mobile-menu-btn" class="icon-btn hide-desktop">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h2 id="current-chat-title">New Conversation</h2>
+            </header>
+
+            <div id="chat-box" class="chat-box">
+                <!-- Chat messages will appear here -->
+                <div class="welcome-screen" id="welcome-screen">
+                    <i class="fa-solid fa-sparkles welcome-icon"></i>
+                    <h2>How can I help you today?</h2>
+                    <p>Ask about live news, IPL scores, or generate creative content.</p>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Message ShaiksGPT..." autocomplete="off">
+                    <button id="send-btn" onclick="sendMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p class="disclaimer">ShaiksGPT can make mistakes. Consider verifying important information.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
